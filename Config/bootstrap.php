@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'./../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
@@ -13,8 +13,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
 use Symfony\Component\Form\Form as Form;
-use Entities\User;
-use Entities\Admin;
 use Lib\Crop;
 
 class MyApplication extends Application
@@ -32,14 +30,14 @@ $app = new Silex\Application();
 $app['debug'] = true;
 
 $dbCredentials = array(
-	'db.options' => array(
-    'driver'	=> 'pdo_mysql',
-    'dbname'    => 'sycen',
-    'host'		=> 'localhost',
-    'user'		=> 'root',
-    'password'	=> '',
-    'charset'	=> 'utf8'
-));
+	       'db.options' => array(
+	           'driver' => 'pdo_mysql',
+		       'dbname'    => 'yruama',
+		           'host'     => 'localhost',
+			       'user' 	 => 'root',
+			           'password'	=> '',
+				       'charset'   => 'utf8'
+				       ));
 
 $app['image_games_path'] = __DIR__ . '/../web/Ressources/img/games/';
 
@@ -53,7 +51,7 @@ $app->register(new Silex\Provider\TranslationServiceProvider(), array(
 ));
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-	'twig.path' => __DIR__.'./../web/Sources',
+	'twig.path' => __DIR__.'/../web',
 ));
 
 $app->register(new FormServiceProvider());
@@ -83,31 +81,6 @@ $app['security.firewalls'] = array(
 		})
 	)
 );
-
-$app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
-    $user = new Entities\User($app['db']); 
-    $admin = new Entities\Admin($app['db']);
-	$token = $app['security']->getToken(); 
-    $userToken = $token->getUser();
-
-    if ($userToken != 'anon.')
-    {
-        $userInfos = $user->searchByLogin($userToken->getUsername());
-    	$twig->addGlobal('user', $userInfos);
-    	$twig->addGlobal('anon', false);
-    }
-    else 
-    {
-    	$twig->addGlobal('user', '');
-    	$twig->addGlobal('anon', true);
-    }
-
-    $app['plateforme'] = $admin->getPlateforme();
-    $twig->addGlobal('plateforme', $app['plateforme']);
-
-
-    return $twig;
-}));
 
 $app['security.role_hierarchy'] = array('ROLE_ADMIN' => array('ROLE_USER'), 'ROLE_USER' => array('IS_AUTHENTICATED_REMEMBERED'));
 
