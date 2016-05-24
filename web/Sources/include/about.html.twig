@@ -57,7 +57,7 @@
         <!-- End Profile -->
         
         <!-- Start Profile -->
-        <div class="span4 profile">
+        <div class="span4 profile jordy">
             <div class="image-wrap">
                 <div class="hover-wrap">
                     <span class="overlay-img"></span>
@@ -123,3 +123,16 @@
 </div>
 <!-- End About Section -->
 
+
+
+<audio id="sound1" src="{{ app.request.basepath }}/Ressources/sounds/CrystalStudio.mp3"></audio>
+
+
+<script type="text/javascript">
+    var audio1 = document.getElementById('sound1');
+
+    $.(".jordy").click(function() {
+        audio1.Play();
+    });
+
+</script>
