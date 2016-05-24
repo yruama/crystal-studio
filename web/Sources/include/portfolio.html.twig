@@ -1,0 +1,65 @@
+<!-- Our Work Section -->
+<div id="work" class="page">
+    <div class="container">
+        <!-- Title Page -->
+        <div class="row">
+            <div class="span12">
+                <div class="title-page">
+                    <h2 class="title">Our Work</h2>
+                    <h3 class="title-description">We try to make <b>awesome</b> game. But .... it does not work !</h3>
+                </div>
+            </div>
+        </div>
+        <!-- End Title Page -->
+        
+        <!-- Portfolio Projects -->
+        <div class="row">
+            <div class="span3">
+                <!-- Filter -->
+                <nav id="options" class="work-nav">
+                    <ul id="filters" class="option-set" data-option-key="filter">
+                        <li class="type-work">Type of Game</li>
+                        <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
+                        <li><a href="#filter" data-option-value=".shooter">Shooter</a></li>
+                        <li><a href="#filter" data-option-value=".plateformer">Platformer</a></li>
+                    </ul>
+                </nav>
+                <!-- End Filter -->
+            </div>
+            
+            <div class="span9">
+                <div class="row">
+                    <section id="projects">
+                        <ul id="thumbs">
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs span3 shooter">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Rogue Space" href="{{ app.request.basepath }}/Ressources/img/work/full/roguespace.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="{{ app.request.basepath }}/Ressources/img/work/thumbs/roguespace.jpg" alt="<b>Work In Progress.</b>">
+                            </li>
+                            <!-- End Item Project -->
+                            
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs span3 platformer">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Sycen" href="{{ app.request.basepath }}/Ressources/img/work/full/sycen.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="{{ app.request.basepath }}/Ressources/img/work/thumbs/sycen.jpg" alt="<b>Work In Progress.</b>.">
+                            </li>
+                            <!-- End Item Project -->
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- End Portfolio Projects -->
+    </div>
+</div>
+<!-- End Our Work Section -->
