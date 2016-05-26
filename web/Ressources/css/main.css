@@ -1380,3 +1380,14 @@ footer .credits {
        -o-transition: none;
           transition: none;
 }
+
+/* ** Perso ** */
+
+.imgBlog {
+	float: left; 
+	max-height: 200px;
+	border: 1px solid black;
+	padding: 5px;
+	margin: 5px;
+	margin-right: 25px;
+}

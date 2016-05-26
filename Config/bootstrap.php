@@ -30,14 +30,15 @@ $app = new Silex\Application();
 $app['debug'] = true;
 
 $dbCredentials = array(
-	       'db.options' => array(
-	           'driver' => 'pdo_mysql',
-		       'dbname'    => 'yruama',
-		           'host'     => 'localhost',
-			       'user' 	 => 'root',
-			           'password'	=> '',
-				       'charset'   => 'utf8'
-				       ));
+	'db.options' => array(
+    'driver' => 'pdo_mysql',
+    'dbname'    => 'yruama',
+    'host'     => 'localhost',
+    'user' 	 => 'root',
+    'password'	=> '',
+    'charset'   => 'utf8'
+    )
+);
 
 $app['image_games_path'] = __DIR__ . '/../web/Ressources/img/games/';
 

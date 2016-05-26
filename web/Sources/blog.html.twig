@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <!DOCTYPE html>
-<html>
     <head>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -44,12 +42,10 @@
         <link rel="icon" type="image/jpg" href="{{ app.request.basepath }}/Ressources/img/favicon.jpg" />
     </head>
 
-    {{ include('Sources/include/header.html.twig') }}
+    {{ include('Sources/include/header-blog.html.twig') }}
     <body>
 
-        {{ include('Sources/include/portfolio.html.twig') }}
-        {{ include('Sources/include/about.html.twig') }}
-        {{ include('Sources/include/contact.html.twig') }}
+        {{ include('Sources/include/news.html.twig') }}
         {{ include('Sources/include/footer.html.twig') }}
     </body>
     
@@ -67,7 +63,6 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
     <script src="{{ app.request.basepath }}/Ressources/js/bootstrap.min.js"></script> <!-- Bootstrap -->
-    <script src="{{ app.request.basepath }}/Ressources/js/supersized.3.2.7.min.js"></script> <!-- Slider -->
     <script src="{{ app.request.basepath }}/Ressources/js/waypoints.js"></script> <!-- WayPoints -->
     <script src="{{ app.request.basepath }}/Ressources/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
     <script src="{{ app.request.basepath }}/Ressources/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
@@ -76,30 +71,5 @@
     <script src="{{ app.request.basepath }}/Ressources/js/jquery.tweet.js"></script> <!-- Tweet -->
     <script src="{{ app.request.basepath }}/Ressources/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
     <script src="{{ app.request.basepath }}/Ressources/js/main.js"></script>
-
-<script type="text/javascript">
-    var audio1 = document.getElementById('sound1');
-
-   $( ".jordy" ).click(function() {
-  audio1.play();
-});
-
-</script>
-
-<script type="text/javascript">
-$(".submit").click(function () {
-    console.log("SALUT");
-    var name = $("#contact_name").val();
-    var mail = $("#contact_email").val();
-    var text = $("#contact_message").val();
-
-    $.post("/contact/", { name: name, mail: mail, text: text })
-    .done(function( data ) {
-        document.location.href="http://crystal-studio.xyz/";
-    });
-});
-
-
-</script>
 
 </html>
