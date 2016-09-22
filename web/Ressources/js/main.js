@@ -78,8 +78,8 @@ BRUSHED.slider = function(){
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
 											{image : './Ressources/img/slider-images/image01.jpg', title : '<div class="slide-content">Crystal studio</div>', thumb : '', url : ''},
-											{image : './Ressources/img/slider-images/image02.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
-											{image : './Ressources/img/slider-images/image03.jpg', title : '<div class="slide-content">ROGUE SPACE</div>', thumb : '', url : ''},
+											{image : './Ressources/img/slider-images/mummified.jpg', title : '<div class="slide-content">Mummified</div>', thumb : '', url : ''},
+											//{image : './Ressources/img/slider-images/image03.jpg', title : '<div class="slide-content">ROGUE SPACE</div>', thumb : '', url : ''},
 											//{image : './Ressources/img/slider-images/image04.jpg', title : '<div class="slide-content">Crystal studio</div>', thumb : '', url : ''}  
 									],
 									
